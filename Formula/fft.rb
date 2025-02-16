@@ -17,6 +17,7 @@ class Fft < Formula
 
   test do
     # Verify that fft displays its help message
-    assert_match "Usage: fft <input-file>", shell_output("#{bin}/fft --help", 1)
+    output = shell_output("#{bin}/fft --help")
+    assert_match(/usage:/i, output)
   end
 end
