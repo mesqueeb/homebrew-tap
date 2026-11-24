@@ -1,22 +1,19 @@
-# Documentation: https://docs.brew.sh/Formula-Cookbook
-#                https://rubydoc.brew.sh/Formula
 class Fft < Formula
-  desc "🔊 An Experimental Swift CLI for FFT Analysis"
+  desc "Command-line tool for FFT analysis"
   homepage "https://github.com/mesqueeb/SwiftSound"
   url "https://github.com/mesqueeb/SwiftSound/releases/download/v1.0.3/fft.zip"
   sha256 "042fdea750e43082ef515c7a9e986a7e994c1851375239315bf9f1aac342c74d"
   license "MIT"
 
-  # Add sox as a runtime dependency
+  depends_on arch: :arm64
+  depends_on macos: :sequoia
   depends_on "sox"
 
   def install
-    # Install the fft binary into Homebrew's bin directory
     bin.install "fft"
   end
 
   test do
-    # Verify that fft displays its help message
     output = shell_output("#{bin}/fft --help")
     assert_match(/usage:/i, output)
   end
