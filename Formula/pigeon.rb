@@ -1,8 +1,8 @@
 class Pigeon < Formula
   desc "Command-line SMTP mail client for macOS"
   homepage "https://github.com/mesqueeb/Pigeon"
-  url "https://github.com/mesqueeb/Pigeon/releases/download/v0.0.5/pigeon-v0.0.5-macos-universal.zip"
-  sha256 "9e56357a4dba76b6dad6ecb48132046b655bcdcab265e3541e1bce3e3485d1cd"
+  url "https://github.com/mesqueeb/Pigeon/releases/download/v0.0.6/pigeon-v0.0.6-macos-universal.zip"
+  sha256 "49c31fd3583f54db0e7c6c288a6532a844a53b13b0dda21776e829a3b325cfbd"
   license "MIT"
 
   depends_on macos: :ventura
